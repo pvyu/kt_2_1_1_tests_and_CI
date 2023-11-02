@@ -50,7 +50,7 @@ class MainKtTest {
         sum = 15_001
         totalMonthSum = 0
         tax = calcTransferTax( sum, totalMonthSum, cardType)
-        assertEquals(TRANSFER_LIMIT_ERROR, tax)
+        assertEquals(MONTH_LIMIT_ERROR, tax)
     }
     //--------------------------------------------------------------------
 
