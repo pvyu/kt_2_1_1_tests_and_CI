@@ -8,7 +8,7 @@ const val MONTH_LIMIT_ERROR : Int = -2
 const val UNKNOWN_CARD_ERROR : Int = -3
 //---------------------------------------------------------------------
 
-fun calsTransferTax(sum : Int, totalMonthSum : Int = 0, cardTypeFrom : CardType = CardType.VK_Pay) : Int {
+fun calcTransferTax(sum : Int, totalMonthSum : Int = 0, cardTypeFrom : CardType = CardType.VK_Pay) : Int {
     var result : Int = 0;
 
     val monthLimit_NoTaxMax_Master_Maestro : Int = 75_000
@@ -78,6 +78,6 @@ fun calsTransferTax(sum : Int, totalMonthSum : Int = 0, cardTypeFrom : CardType 
 //---------------------------------------------------------------------
 
 fun main() {
-    val tax : Int = calsTransferTax(500, 0, CardType.Maestro)
+    val tax : Int = calcTransferTax(500, 0, CardType.Maestro)
     println(tax)
 }
